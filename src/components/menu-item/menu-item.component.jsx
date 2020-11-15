@@ -14,4 +14,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     </div>
 );
 
+/**
+ * to not do properties tunneling & access history & match directly here.
+ */
 export default withRouter(MenuItem);
