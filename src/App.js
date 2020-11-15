@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import { HomePage } from './pages/homepage/homepage.component';
 
@@ -13,8 +13,10 @@ const HatsPage = () => {
 function App() {
   return (
     <div> 
-      <Route exact path='/' component={HomePage}></Route>
-      <Route path='/hats' component={HatsPage}></Route>
+      <Switch>
+        <Route path='/' component={HomePage}></Route>
+        <Route path='/hats' component={HatsPage}></Route>
+      </Switch>
     </div>
   );
 }
