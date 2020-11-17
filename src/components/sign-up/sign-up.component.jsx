@@ -19,7 +19,7 @@ class SignUp extends React.Component {
 
 
     handleSubmit = async event => {
-        this.preventDefault();
+        event.preventDefault();
         const { displayName, email, password, confirmPassword } = this.state;
 
         if (password !== confirmPassword) {
@@ -28,7 +28,7 @@ class SignUp extends React.Component {
         }
 
         try {
-            const { user } = await auth.createUSerWithEmailAndPassword(email, password);
+            const { user } = await auth.createUserWithEmailAndPassword(email, password);
             await createUserProfileDocument(user, { displayName });
             this.setState({
                 displayName: '',
@@ -86,7 +86,7 @@ class SignUp extends React.Component {
                         label='Confirm Password'
                         required
                     ></FormInput>
-                    <CustomButton type='submit'> Sign In </CustomButton>
+                    <CustomButton onClick={this.handleSubmit}> Sign UP !! </CustomButton>
                 </form>
             </div>
 
