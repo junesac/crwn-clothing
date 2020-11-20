@@ -17,14 +17,14 @@ class SignIn extends React.Component {
     handleSubmit = async (event) => {
         event.preventDefault();
 
-        const {email, password} = this.state;
+        const { email, password } = this.state;
         try {
             await auth.signInWithEmailAndPassword(email, password);
             this.setState({ email: '', password: '' });
-        } catch(error) {
-            console.log(error); 
+        } catch (error) {
+            console.log(error);
         }
-        
+
     }
 
     handleChange = (event) => {
@@ -39,10 +39,11 @@ class SignIn extends React.Component {
                 <span>Sign in with your email and password</span>
 
                 <form onSubmit={this.handleSubmit}>
-                    <FormInput name='email' type='email' label='Email' handleChange={this.handleChange} value={this.state.email} required />
+                    <FormInput name='email' type='email' label='Email' handleChange={this.handleChange}
+                        value={this.state.email} required />
                     <FormInput name='password' type='password'
                         label='Password' handleChange={this.handleChange} value={this.state.password} required />
-                    
+
                     <div className='buttons'>
                         <CustomButton type='submit'> Sign In </CustomButton>
                         <CustomButton isGoogleSignIn onClick={signInWithGoogle}>
