@@ -6,8 +6,8 @@ import { auth, signInWithGoogle } from './../../firebase/firebase.utils.js';
 
 class SignIn extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             email: '',
             password: ''
