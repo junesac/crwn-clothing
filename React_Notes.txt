@@ -1,0 +1,206 @@
+-----------------------------------------------
+React Notes
+-----------------------------------------------
+
+nvm install 10.15.3
+nvm use 10.15.3
+
+-----------------------------------------------
+To Create a new React App
+
+npx create-react-app monster-rolodex
+
+-----------------------------------------------
+yarn add gh-pages
+yarn deploy (after adding 2 scripts)
+
+-----------------------------------------------
+
+To update React package:
+yarn list react react-dom react-scripts
+
+yarn install
+yarn upgrade
+
+npm install is equivalent to yarn command.
+
+-----------------------------------------------
+
+To Add node sass to project:
+yarn add node-sass
+yarn add node-sass@4.14.1
+
+-----------------------------------------------
+
+
+To upgrade React versions & libraries:
+
+1. delete yarn.lock file
+2. npm update -D
+3. npm install 
+4. npm audit fix
+5. npm audit
+6. npm start
+
+
+search react-dom in package-lock.json file
+
+7. git add .
+8. git commit & push to remote location.
+
+-----------------------------------------------
+
+To Add React Router DOM:
+
+yarn add react-router-dom
+
+-----------------------------------------------
+
+To Add firebase
+
+yarn add firebase
+
+-----------------------------------------------
+
+To Add REDUX:
+
+yarn add redux redux-logger react-redux
+
+
+-----------------------------------------------
+
+Reducer: display state : Object
+
+we pass reducer as props in component.
+
+we update reducers using actions.
+Action is a object having type & payload.
+component will fire action with name on it. 
+becomes someting like {type:, payload} & go to reducer
+reducer check against type & updates the payload.
+then reducer again pass props to components
+& components rerenders.
+
+reducer take previous state & action as input 
+Return new state.
+-----------------------------------------------
+
+Redux flow:
+
+Component will fire -> action 	-> (Middle ware)	-> 	root reducer 	->	Store 		-> 	DOM Changes (It is nothing but the component)
+
+So it is a cycle.
+-----------------------------------------------
+
+Changed files:
+
+index.js
+root-reducer.jsx
+user-reducer.jsx
+store.js
+
+-----------------------------------------------
+
+
+ReSelect Library:
+
+yarn add reselect
+
+component should re render only when the part of state changed which matters for component.
+
+-----------------------------------------------
+
+2 types of seletor:
+
+1. Input selector
+- doesn't use create selector
+- it is a function, gets whole state & returns slice of it.
+
+2. Output Selector
+- uses create selector & input selector to build itself.
+
+
+
+
+
+-----------------------------------------------
+
+withRouter: Higher order function
+
+to not do properties tunneling & access history & match directly here.
+histor.push(url) -> helps us in routing
+
+-----------------------------------------------
+
+window.localStorage: always have access till we manually clears it out.
+
+window.localStorage.setItem
+window.localStorage.setItem
+
+json.stringify() 	-> 	json to string
+json.parse() 		-> 	string to json
+
+window.sessionStorage: man tain it for session. clears out when we close the tab/window. 
+
+We can only store strings. For storing json value, we can convert json to string & store.
+
+-----------------------------------------------
+
+
+yarn add redux-persist
+
+
+-----------------------------------------------
+
+react Route:
+
+import { Route } from 'react-router-dom';
+
+If a component is wrapped around Route then it automatically sends 3 objects as props in it. (match, location & history)
+
+-----------------------------------------------
+
+
+Stripe Payments: Allow us to handle payments
+
+
+4242 4242 4242
+01/20
+123
+
+
+Library:
+yarn add react-stripe-checkout
+
+-----------------------------------------------
+
+Heroku:
+Platform as a service
+we can host app over it for free !!
+
+in case of traffic, we can upgrade the plan.
+
+
+
+heroku create junesac-clothing-live --buildpack https://github.com/mars/create-react-app-buildpack.git
+git push heroku master
+
+
+https://junesac-clothing-live.herokuapp.com/ | https://git.heroku.com/junesac-clothing-live.git
+
+
+
+-----------------------------------------------
+
+
+You can learn more about the buildpack we used in the previous video by following the documentation here: 
+https://github.com/mars/create-react-app-buildpack
+
+-----------------------------------------------
+
+If you would like to not manually deploy the the app like we have seen in the previous video every time, and you want the app to redeploy anytime you update MASTER in your github repository, then you can set that up through Heroku by following these steps: https://devcenter.heroku.com/articles/github-integration
+
+-----------------------------------------------
+
+
+-----------------------------------------------
