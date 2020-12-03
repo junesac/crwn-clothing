@@ -220,4 +220,21 @@ Styled-Component library used to do CSS in JS.
 Performance increases for CSS in JS.
 
 
+yarn add styled-components
+
+import styled form 'styled-components';
+
+// destructuring the props
+
+const Text = styled.div`
+	color: red;
+	font-size: 28px;
+	border: ${  ({isActive}) => isActive ? '1px solid black' : '3px dotted green' }
+`;
+
+<Text isActive={true}>I am a component.</Text>
+
+
+now styles will be scoped to uniquely created class name.
+Provides true isolation.
 -----------------------------------------------
