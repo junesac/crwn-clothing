@@ -238,3 +238,10 @@ const Text = styled.div`
 now styles will be scoped to uniquely created class name.
 Provides true isolation.
 -----------------------------------------------
+
+
+Trade offs in styled-components:
+
+
+
+-----------------------------------------------

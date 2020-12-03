@@ -11,7 +11,14 @@ import { selectCurrentUser } from '../../redux/user/user.seletor';
 import { selectCartHidden } from '../../redux/cart/cart.selector';
 
 import { createStructuredSelector } from 'reselect';
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, OptionDiv } from './header.styles';
+import {
+    HeaderContainer,
+    LogoContainer,
+    OptionsContainer,
+    OptionLink,
+    OptionDiv
+}
+    from './header.styles';
 
 const Header = ({ currentUser, hidden }) => (
 
