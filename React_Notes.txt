@@ -243,5 +243,8 @@ Provides true isolation.
 Trade offs in styled-components:
 
 
+Code uptill now : https://github.com/zhangmyihua/lesson-26
+
+Complete code using styled component: https://github.com/zhangmyihua/lesson-26-complete
 
 -----------------------------------------------
