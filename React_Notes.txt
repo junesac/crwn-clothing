@@ -203,4 +203,21 @@ If you would like to not manually deploy the the app like we have seen in the pr
 -----------------------------------------------
 
 
+CSS in JS:
+
+All CSS share single 'CSS Global Namespace'.
+
+BEM naming convention: Block element modifier
+ - Style of naming your CSS.
+
+
+Styled-Component library used to do CSS in JS.
+	- Uses JS library to render the style.
+	- Used to keep CSS onlt to a particular component.
+	- 'CSS Global Namespace' actually made available CSS to other components as all teh CSS lies in 'CSS Global Namespace'.
+		So we are using styled-cmponent library to keep CSS to a particular component only.
+
+Performance increases for CSS in JS.
+
+
 -----------------------------------------------
