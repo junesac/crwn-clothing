@@ -250,3 +250,79 @@ Complete code using styled component: https://github.com/zhangmyihua/lesson-26-c
 
 
 -----------------------------------------------
+
+Advance Firebase 
+
+when we query the fire base store it return 2 types of objects : Query Reference Objects & SnapShots Objects.
+Always return these objects even if there is no data in the store.
+of these objects, they can be either Document or Collection version.
+
+
+
+1.	Query Reference Objects
+	
+	- It is an object that represents the current place in database that we are querying.
+
+	- can be queried using the following:
+		firestore.doc('/users/:userId')
+		firestore.collections('/users')
+
+	- It doesnot have the actual data.
+	- It just represent the pace in path in our database 
+	- To get the actual data, we have to get the snapshot object & we get that using reference object.
+
+		Document Query reference object
+		Collection Query reference object
+
+
+
+
+Document Reference vs Collection reference:
+
+	- Document Ref is used to perform CRUD openrations on document in store.
+	- .set()
+	- .get()
+	- .update()
+	- .delete()
+
+
+Collection Ref:
+
+
+	- .add() - To add document in collection
+
+	collectionref.add({// value: props});
+
+
+	- We can get snapshot object from these reference objects by calling .get() method.
+
+	documentRef.get() - it gives us document snapshot object
+	collectionRef.get() - it gives us collection snapshot object a.k.a query snapshot object.
+
+
+2.	Query SnapShots Objects
+
+		Document Query snapshot objects
+		Collection Query snapshot object is know as query snapshot.
+
+	- we get it via document reference object.
+	- it allows us to check whether the document exist or not.
+		docSnapshotRef.exists()
+	- to get json object of document
+		docSnapshotRef.data()
+
+-----------------------------------------------
+
+Security Rules
+
+
+
+
+-----------------------------------------------
+
+Advance Redux
+
+-----------------------------------------------
+
+
+-----------------------------------------------
